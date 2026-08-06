@@ -1,12 +1,12 @@
 cask "beacon" do
-  version "0.0.3"
+  version "0.0.4"
 
   on_arm do
-    sha256 "eddc4c7e7d0653f716c650eb884089e58913475b8cf471bc43c132d5756debd6"
+    sha256 "f5fc9330b80b342748ce247911e5b80be77ff9b46e11a38769768c0365941835"
     url "https://github.com/quizuncle/beacon-releases/releases/download/v#{version}/Beacon-#{version}-arm64.dmg"
   end
   on_intel do
-    sha256 "488768d54d0232c12015a9537ce3d804dab92c64d61bba05abc8b678cab64a49"
+    sha256 "cca2c1c8bf29a787ea251e050d855befe2b73f49ceb3c19d7fc7f89a2ebad88f"
     url "https://github.com/quizuncle/beacon-releases/releases/download/v#{version}/Beacon-#{version}.dmg"
   end
 
