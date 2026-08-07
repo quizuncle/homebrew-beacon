@@ -14,6 +14,12 @@ cask "beacon" do
   desc "Keyboard-first desktop API client (Postman-style)"
   homepage "https://github.com/quizuncle/beacon-releases"
 
+  # Beacon.app's Info.plist sets LSMinimumSystemVersion 12.0, so declare the same
+  # floor here. Without it, Homebrew installs happily onto older macOS and the app
+  # then fails to launch, and "brew audit --online" fails the cask outright with
+  # "Artifact defined :monterey ... but the cask declared no minimum".
+  depends_on macos: ">= :monterey"
+
   app "Beacon.app"
 
   # Beacon isn't notarized (no paid Apple Developer subscription) — clear the
